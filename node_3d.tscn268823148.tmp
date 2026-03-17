@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://dw0f7k2u25n8g"]
+
+[ext_resource type="Script" uid="uid://dwks8l10f6yj" path="res://generate_gnome.gd" id="1_a202f"]
+[ext_resource type="Script" uid="uid://ddcacnvbgeity" path="res://appendage_generator.gd" id="2_noarx"]
+[ext_resource type="Script" uid="uid://bqlbs6cw76gm3" path="res://gnome_visualizer.gd" id="3_a0tk4"]
+[ext_resource type="Script" uid="uid://cte4jalives85" path="res://addons/sk_fly_camera/src/fly_camera.gd" id="3_r3fl7"]
+[ext_resource type="Material" uid="uid://b6gi4flc3v5rk" path="res://shaders/toon_shader.tres" id="5_4arys"]
+[ext_resource type="PackedScene" uid="uid://requq8pai42n" path="res://gnome_parts/ear/ear.gltf" id="6_6iypd"]
+[ext_resource type="PackedScene" uid="uid://dsniufgnvi2gs" path="res://gnome_parts/ear/ear2.gltf" id="7_tereu"]
+[ext_resource type="PackedScene" uid="uid://tqsh76j3ddmm" path="res://gnome_parts/hat/hat2.gltf" id="8_cdqbm"]
+[ext_resource type="PackedScene" uid="uid://drh4ejwm2n8cf" path="res://gnome_parts/hat/hat.gltf" id="9_imku0"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r3fl7"]
+sky_top_color = Color(1, 1, 1, 1)
+sky_horizon_color = Color(1.277395, 1.269645, 1.2606452, 1)
+ground_horizon_color = Color(1.277395, 1.269645, 1.2606452, 1)
+
+[sub_resource type="Sky" id="Sky_jka67"]
+sky_material = SubResource("ProceduralSkyMaterial_r3fl7")
+
+[sub_resource type="Environment" id="Environment_i5arm"]
+background_mode = 1
+background_color = Color(0.21298045, 0.35412788, 0.5764492, 1)
+sky = SubResource("Sky_jka67")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_i5arm"]
+
+[node name="Node3D" type="Node3D" unique_id=1166066885]
+script = ExtResource("1_a202f")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=453938312]
+environment = SubResource("Environment_i5arm")
+
+[node name="Gnome Visualizer" type="Node3D" parent="." unique_id=1905293700]
+script = ExtResource("3_a0tk4")
+
+[node name="GnomeGenerator" type="Node3D" parent="." unique_id=311695135]
+script = ExtResource("1_a202f")
+metadata/_custom_type_script = "uid://dwks8l10f6yj"
+
+[node name="Camera3D" type="CharacterBody3D" parent="." unique_id=2054735116]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6984507, 3.4151466)
+script = ExtResource("3_r3fl7")
+use_default_controls = true
+metadata/_custom_type_script = "uid://cte4jalives85"
+
+[node name="AppendageGenerator" type="Node" parent="." unique_id=2110491365]
+script = ExtResource("2_noarx")
+source_folder = "res://gnome_parts"
+target_folder = "res://gnome_data/pieces"
+metadata/_custom_type_script = "uid://ddcacnvbgeity"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1056163447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5324774, 0.50518936, 1.3965344)
+mesh = SubResource("SphereMesh_i5arm")
+surface_material_override/0 = ExtResource("5_4arys")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=240285745]
+transform = Transform3D(1, 0, 0, 0, 0.60623825, 0.7952831, 0, -0.7952831, 0.60623825, 0, 0.86130774, 1.8565428)
+
+[node name="ear2" parent="." unique_id=2132598816 instance=ExtResource("6_6iypd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031752497, 0, -0.05497861)
+
+[node name="ear22" parent="." unique_id=522776706 instance=ExtResource("7_tereu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5154595, 0, -0.2328977)
+
+[node name="hat22" parent="." unique_id=68411006 instance=ExtResource("8_cdqbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25715017, 0, -1.7589848)
+
+[node name="hat2" parent="." unique_id=641592783 instance=ExtResource("9_imku0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3567083, 0, -3.5475702)
+
+[node name="hat3" parent="." unique_id=1679126207 instance=ExtResource("9_imku0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3906033, 0, 0.06663954)

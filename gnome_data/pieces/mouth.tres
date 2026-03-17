@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Appendage" format=3 uid="uid://d2ylf8r7yvfp7"]
+
+[ext_resource type="PackedScene" uid="uid://buywtbiqvoxd6" path="res://gnome_parts/mouth/mouth.gltf" id="1_bsa36"]
+[ext_resource type="Script" uid="uid://cp15keds23prh" path="res://gnome_data/appendage.gd" id="2_ksxg5"]
+
+[resource]
+script = ExtResource("2_ksxg5")
+scene = ExtResource("1_bsa36")
+socket_type = 7

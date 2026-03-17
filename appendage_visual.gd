@@ -1,0 +1,1 @@
+class_name AppendageVisual extends Node3D

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SocketInfo" format=3 uid="uid://chlghls88v7gi"]
+
+[ext_resource type="Script" uid="uid://bacbku6y8jvsx" path="res://gnome_data/socket.gd" id="1_y2dii"]
+
+[resource]
+script = ExtResource("1_y2dii")
+type = 6
+scale_transform = Vector3(0, 0.4, 0)
+position_transform = Vector3(0.17, 0, 0)
+metadata/_custom_type_script = "uid://bacbku6y8jvsx"
