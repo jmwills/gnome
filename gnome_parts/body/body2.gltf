@@ -50,7 +50,7 @@
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material.013",
+			"name":"body",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
 					0.7592293620109558,

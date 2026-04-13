@@ -1,4 +1,0 @@
-class_name Gnome
-
-@export var name : String
-@export var appendage_data : Dictionary

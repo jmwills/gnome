@@ -27,7 +27,7 @@
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material.009",
+			"name":"hat",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
 					1,

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dlr4k3v15jyip"]
+
+[ext_resource type="Script" uid="uid://j6m61c5oboym" path="res://gnome_skeleton.gd" id="1_dgmfh"]
+
+[node name="GnomeSkeleton" type="Node3D" unique_id=1816128457]
+script = ExtResource("1_dgmfh")

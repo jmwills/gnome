@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://325fujfq4h72"]
+
+[ext_resource type="Script" uid="uid://coiqnlkb8nwr6" path="res://beard_generator.gd" id="1_ymols"]
+[ext_resource type="Script" uid="uid://cte4jalives85" path="res://addons/sk_fly_camera/src/fly_camera.gd" id="2_mwr3a"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ymols"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ymols"]
+radius = 0.02
+height = 0.04
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mwr3a"]
+albedo_color = Color(0.32813662, 0.14478585, 1, 1)
+
+[sub_resource type="Curve" id="Curve_ymols"]
+_data = [Vector2(0.06514658, 0.1725164), 0.0, -0.4137698, 0, 1, Vector2(0.48208472, 0), -0.4137698, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_mwr3a"]
+_limits = [0.0, 0.50030506, 0.0, 1.2]
+_data = [Vector2(0, 0.50030506), 0.0, 0.0, 0, 0, Vector2(0.43800002, 0.21260673), 0.0, 0.0, 0, 0, Vector2(0.606, 0.33363843), 0.0, 0.0, 0, 0, Vector2(0.71000004, 0.50030506), 0.0, 0.0, 0, 0, Vector2(0.77000004, 0.19078133), 0.0, 0.0, 0, 0, Vector2(1.2, 0), 0.0, 0.0, 0, 0]
+point_count = 6
+
+[node name="Beard Generator Test" type="Node3D" unique_id=702584608]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2014138736]
+mesh = SubResource("BoxMesh_ymols")
+
+[node name="FlyCamera" type="CharacterBody3D" parent="." unique_id=2089589640]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.3235981)
+script = ExtResource("2_mwr3a")
+fly_speed = 5.0
+metadata/_custom_type_script = "uid://cte4jalives85"
+
+[node name="Area3D" type="Area3D" parent="." unique_id=673542579]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1370991834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9814863, 0)
+visible = false
+mesh = SubResource("SphereMesh_ymols")
+surface_material_override/0 = SubResource("StandardMaterial3D_mwr3a")
+
+[node name="Beard Generator" type="Node3D" parent="." unique_id=988714538 node_paths=PackedStringArray("head_mesh", "test_sphere")]
+script = ExtResource("1_ymols")
+head_mesh = NodePath("../MeshInstance3D")
+test_sphere = NodePath("../MeshInstance3D2")
+top_curve = SubResource("Curve_ymols")
+bottom_curve = SubResource("Curve_mwr3a")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1673281964]
+transform = Transform3D(0.25206932, -0.77284694, 0.58238196, 0, 0.60181504, 0.79863554, -0.9677092, -0.20131153, 0.15169911, 0, 0, 0)
+shadow_enabled = true

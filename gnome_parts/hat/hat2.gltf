@@ -27,12 +27,12 @@
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material.013",
+			"name":"hat",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
-					0.7592293620109558,
-					0.3486836850643158,
 					1,
+					0.048041559755802155,
+					0.018672261387109756,
 					1
 				],
 				"metallicFactor":0,

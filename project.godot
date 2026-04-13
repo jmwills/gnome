@@ -25,11 +25,10 @@ resources_spreadsheet_view/freeze_first_column=true
 
 config/name="gnome"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
 
 [autoload]
 
-GnomeGenerator="*uid://dwks8l10f6yj"
+GnomeGenerator="*uid://bwcap6wjhsao6"
 
 [editor_plugins]
 

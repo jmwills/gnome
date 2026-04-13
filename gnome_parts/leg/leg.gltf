@@ -26,7 +26,7 @@
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material",
+			"name":"leg",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
 					0,
@@ -59,7 +59,7 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":254,
+			"count":388,
 			"max":[
 				0.24161367118358612,
 				0.0014339053304865956,
@@ -75,13 +75,13 @@
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":254,
+			"count":388,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":254,
+			"count":388,
 			"type":"VEC2"
 		},
 		{
@@ -94,32 +94,32 @@
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":3048,
+			"byteLength":4656,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":3048,
-			"byteOffset":3048,
+			"byteLength":4656,
+			"byteOffset":4656,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":2032,
-			"byteOffset":6096,
+			"byteLength":3104,
+			"byteOffset":9312,
 			"target":34962
 		},
 		{
 			"buffer":0,
 			"byteLength":2496,
-			"byteOffset":8128,
+			"byteOffset":12416,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":10624,
+			"byteLength":14912,
 			"uri":"leg.bin"
 		}
 	]

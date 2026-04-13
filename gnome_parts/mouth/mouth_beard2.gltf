@@ -33,7 +33,7 @@
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material.008",
+			"name":"mouth",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
 					0.042311422526836395,
@@ -47,7 +47,7 @@
 		},
 		{
 			"doubleSided":true,
-			"name":"Material.006",
+			"name":"beard",
 			"pbrMetallicRoughness":{
 				"metallicFactor":0,
 				"roughnessFactor":0.5

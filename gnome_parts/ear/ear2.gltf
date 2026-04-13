@@ -21,7 +21,7 @@
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material.012",
+			"name":"head",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
 					0.9943643808364868,
@@ -35,7 +35,7 @@
 		},
 		{
 			"doubleSided":true,
-			"name":"Material.011",
+			"name":"ear",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
 					0.8000074625015259,

@@ -1,7 +1,0 @@
-class_name Appendage
-
-enum SocketType {EYE, EAR, NOSE, HAT}
-
-@export var name : String
-@export var scene : PackedScene
-@export var override_sockettype_transforms : bool = false

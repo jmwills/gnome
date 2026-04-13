@@ -21,7 +21,7 @@
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material.010",
+			"name":"nose",
 			"pbrMetallicRoughness":{
 				"baseColorFactor":[
 					0.4336860179901123,

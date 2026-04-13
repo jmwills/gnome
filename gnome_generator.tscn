@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bwcap6wjhsao6"]
+
+[ext_resource type="Script" uid="uid://b01h6iekv2xl7" path="res://gnome_generator.gd" id="1_ieiit"]
+
+[node name="GnomeGenerator" type="Node" unique_id=618295704]
+script = ExtResource("1_ieiit")
+gnome_pieces_folder = "res://gnome_parts/"

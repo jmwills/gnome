@@ -2,6 +2,13 @@
 
 [ext_resource type="Shader" uid="uid://cruy5w2xl4dea" path="res://shaders/toon.gdshader" id="1_ihgwa"]
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ihgwa"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6iiqg"]
+noise = SubResource("FastNoiseLite_ihgwa")
+seamless = true
+as_normal_map = true
+
 [sub_resource type="Gradient" id="Gradient_ihgwa"]
 interpolation_mode = 2
 offsets = PackedFloat32Array(0.27272728, 0.5405405)
@@ -30,14 +37,15 @@ shader_parameter/step_smoothness = 1.0
 shader_parameter/shadow_tint = Color(0, 0, 0, 1)
 shader_parameter/shadow_tint_amount = 0.4
 shader_parameter/specular = 0.0
-shader_parameter/normal_strength = 0.0
+shader_parameter/normal_strength = 0.15000000223518
+shader_parameter/normal_texture = SubResource("NoiseTexture2D_6iiqg")
 shader_parameter/use_rim = true
 shader_parameter/rim_color = Color(0.646029, 0.646029, 0.646029, 1)
 shader_parameter/rim_amount = 2.645
 shader_parameter/rim_smoothness = 0.2
 shader_parameter/rim_mask_shadow = 1.0
 shader_parameter/rim_blend = 0.40000000596048
-shader_parameter/use_pattern = true
+shader_parameter/use_pattern = false
 shader_parameter/pattern_texture = SubResource("NoiseTexture2D_8dmeu")
 shader_parameter/pattern_uv_mode = 0
 shader_parameter/pattern_tiling = 32.0
